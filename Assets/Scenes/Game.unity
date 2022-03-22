@@ -747,7 +747,7 @@ MonoBehaviour:
   Level: {fileID: 0}
   correctColors:
   - {fileID: 2100000, guid: a0602fa36831b824c94f1546d415b475, type: 2}
-  - {fileID: 2100000, guid: c0d046e132e5ca645b6fecafb2d29bbb, type: 2}
+  - {fileID: 2100000, guid: 9b74093ab089e244ba1f077c59fba06d, type: 2}
   Cars:
   - {fileID: 5144119021429535187, guid: 4f7a483a5bdec2b4e8fa58a2c20b09bb, type: 3}
   - {fileID: 5144119021429535187, guid: ca4832cb910b38649b077bb68f8f9498, type: 3}

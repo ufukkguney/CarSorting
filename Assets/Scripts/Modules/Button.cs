@@ -23,11 +23,11 @@ public class Button : ColorChangeableBase
         if (isSendReady && !GameManager.LevelManager.CurrentLevel.Data.isLevelCompleted)
         {
             isSendReady = false;
-            mesh.transform.DOMove(_downPos.position, LevelVariables.ButtonTime).OnComplete(() =>
+            mesh.transform.DOMove(_downPos.position, GameManager.LevelManager.CurrentLevel.Data.BarrierTime / 4).OnComplete(() =>
             {
-                mesh.transform.DOMove(_upPos.position, LevelVariables.ButtonTime).OnComplete(() =>
+                mesh.transform.DOMove(_upPos.position, GameManager.LevelManager.CurrentLevel.Data.BarrierTime / 4).OnComplete(() =>
                 {
-                    Invoke("SetSendReady", LevelVariables.BarrierTime);
+                    Invoke("SetSendReady", GameManager.LevelManager.CurrentLevel.Data.BarrierTime);
                 });
             });
 

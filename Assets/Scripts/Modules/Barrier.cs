@@ -21,9 +21,9 @@ public class Barrier : ColorChangeableBase
     {
         if (mesh.material.color == callingMaterial.color)
         {
-            transform.DORotate(new Vector3(0, 0, -90), LevelVariables.BarrierTime).OnComplete(() =>
+            transform.DORotate(new Vector3(0, 0, -90), GameManager.LevelManager.CurrentLevel.Data.BarrierTime).OnComplete(() =>
             {
-                transform.DORotate(new Vector3(0, 0, 0), LevelVariables.BarrierTime);
+                transform.DORotate(new Vector3(0, 0, 0), GameManager.LevelManager.CurrentLevel.Data.BarrierTime);
             });
         }
     }

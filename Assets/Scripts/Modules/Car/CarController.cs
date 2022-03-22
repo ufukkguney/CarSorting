@@ -25,12 +25,12 @@ public class CarController : CarElement
     {
         if (Car.Data.CarState == CarState.FrontRow && Car.Data.ColorMaterial.color == material.color)
         {
-            Car.Transform.DOMove(Car.transform.position + Vector3.forward * 100, LevelVariables.moveTime - 1).SetEase(Ease.InOutSine);
+            Car.Transform.DOMove(Car.transform.position + Vector3.forward * 100, GameManager.LevelManager.CurrentLevel.Data.MoveTime - 1).SetEase(Ease.InOutSine);
         }
         else if(Car.Data.CarState == CarState.BackRow && Car.Data.ColorMaterial.color == material.color)
         {
             Car.Data.CarState = CarState.FrontRow;
-            Car.Transform.DOMove(Car.transform.position + Vector3.forward * 30, LevelVariables.moveTime - 1).SetEase(Ease.InOutSine);
+            Car.Transform.DOMove(Car.transform.position + Vector3.forward * 30, GameManager.LevelManager.CurrentLevel.Data.MoveTime - 1).SetEase(Ease.InOutSine);
         }
     }
 
@@ -38,7 +38,7 @@ public class CarController : CarElement
     {
         Car.Data.CarState = CarState.OnTheRoad;
         GameManager.EventManager.CarLastPosition();
-        Car.Transform.DOPath(path, LevelVariables.moveTime, PathType.CatmullRom).SetLookAt(0.2f, Vector3.forward).OnComplete(() => 
+        Car.Transform.DOPath(path, GameManager.LevelManager.CurrentLevel.Data.MoveTime, PathType.CatmullRom).SetLookAt(0.2f, Vector3.forward).OnComplete(() => 
         {
             Car.View.tick.gameObject.SetActive(true);
             Car.View.tick.transform.DOScale((Car.View.tick.transform.localScale + Vector3.one), .5f).OnComplete(() =>

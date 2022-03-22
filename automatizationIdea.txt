@@ -1,0 +1,4 @@
+Projenin şu anki durumunda LevelData'da verilen 2 material ile bütün level o material renklerine göre yükleniyor. 
+
+Yapılacak yeni levelları otomatize etmek istersek;
+->Bir listede tutulacak veriler ile o levelda bulunan hedefleri listedeki dataya göre yükleyip yeni levellar oluşturabiliriz.

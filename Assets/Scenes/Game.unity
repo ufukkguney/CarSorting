@@ -745,6 +745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
+  BarrierTime: 1
+  MoveTime: 2
   correctColors:
   - {fileID: 2100000, guid: a0602fa36831b824c94f1546d415b475, type: 2}
   - {fileID: 2100000, guid: 9b74093ab089e244ba1f077c59fba06d, type: 2}
